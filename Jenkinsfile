@@ -1,7 +1,9 @@
 node{
     stage('Stage 1'){
         echo 'Hello World'
-        echo 'Will this work?'
+    }
+    stage('Stage 2: Docker Test'){
+        sh 'docker run hello-world'
     }
     
 }
