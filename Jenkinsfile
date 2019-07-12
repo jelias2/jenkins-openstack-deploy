@@ -2,8 +2,9 @@ node{
     stage('Stage 1'){
         echo 'Hello World'
     }
-    stage('Stage 2: Docker Test'){
-        sh 'docker run hello-world'
+    stage('Stage 2: Library Test'){
+         def thing = load 'Thing.groovy'
+         echo thing.doStuff()
     }
     
 }
